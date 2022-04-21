@@ -13,7 +13,7 @@ Input:
   SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
   SELF_SERVICE_DESCRIPTION: Rocket Chat Client
   INSTALL_BUTTON_TEXT: "Install %version%"
-  SELF_SERVICE_ICON: RocketChat.png
+  SELF_SERVICE_ICON: RocketChatClient.png
   REINSTALL_BUTTON_TEXT: "Install %version%"
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
