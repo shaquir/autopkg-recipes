@@ -1,7 +1,7 @@
 Description: Recipe description
 Identifier: com.github.shaquir.jamf.SmartScroll
 Input:
-  NAME: Rocket Chat
+  NAME: Smart Scroll
   CATEGORY: Utilities
   GROUP_NAME: "autopkg-%NAME%"
   GROUP_TEMPLATE: JamfSmartGroupTemplate.xml
