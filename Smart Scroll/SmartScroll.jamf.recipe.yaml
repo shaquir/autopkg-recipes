@@ -4,7 +4,7 @@ Input:
   NAME: Rocket Chat
   CATEGORY: Utilities
   GROUP_NAME: "autopkg-%NAME%"
-  GROUP_TEMPLATE: SmartGroup-update-smart-regex.xml
+  GROUP_TEMPLATE: JamfSmartGroupTemplate.xml
   TESTING_GROUP_NAME: Testing
   POLICY_CATEGORY: Testing
   POLICY_TEMPLATE: Policy-install-latest.xml
