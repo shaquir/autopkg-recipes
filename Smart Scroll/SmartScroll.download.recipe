@@ -42,18 +42,7 @@
                         </dict>
                         <key>Processor</key>
                         <string>CodeSignatureVerifier</string>
-                </dict>
-                <dict>
-                <key>Processor</key>
-                <string>FileMover</string>
-                <key>Arguments</key>
-                <dict>
-                        <key>source</key>
-                        <string>%pathname%/Smart Scroll.prefPane</string>
-                        <key>target</key>
-                        <string>%pkgroot%/Library/PreferencePanes/Smart Scroll.prefPane</string>
-                </dict>
-                </dict>
+               </dict>
                 <dict>
                         <key>Arguments</key>
                         <dict>
