@@ -39,12 +39,12 @@ Process:
     Arguments:
       predicate: '%UPDATE_PREDICATE%'
 
-- Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+  - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
 
-- Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
-  Arguments:
-    computergroup_template: "%GROUP_TEMPLATE%"
-    computergroup_name: "%GROUP_NAME%"
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+    Arguments:
+      computergroup_template: "%GROUP_TEMPLATE%"
+      computergroup_name: "%GROUP_NAME%"
 
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
     Arguments:
