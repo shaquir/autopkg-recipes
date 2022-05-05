@@ -1,5 +1,5 @@
 Description: Teams Jamf Pro
-Identifier: com.github.shaquir.jamf.microsoft_teams
+Identifier: com.github.shaquir.jamf.microsoftteams
 ParentRecipe: com.github.rtrouton.pkg.microsoftteams
 MinimumVersion: '2.3'
 
