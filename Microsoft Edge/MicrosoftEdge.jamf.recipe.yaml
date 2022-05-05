@@ -5,7 +5,7 @@ ParentRecipe: com.github.rtrouton.pkg.microsoftedge
 
 Input:
   NAME: Microsoft Edge
-  CATEGORY: Web Browsers
+  CATEGORY: Web browsers
   GROUP_NAME: "autopkg-%NAME%"
   GROUP_TEMPLATE: SmartGroup-update-smart-regex.xml
   TESTING_GROUP_NAME: Testing
