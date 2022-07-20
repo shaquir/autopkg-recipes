@@ -1,5 +1,5 @@
 Description: Recipe description
-Identifier: com.local.stannis.jamf.Skim
+Identifier: com.github.shaquir.recipes.jamf.Skim
 Input:
   NAME: Skim
   CATEGORY: Utilities
