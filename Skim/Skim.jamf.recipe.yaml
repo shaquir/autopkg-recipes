@@ -12,8 +12,7 @@ Input:
   POLICY_RUN_COMMAND: "echo 'Installation of %NAME% complete'"
   SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
   SELF_SERVICE_DESCRIPTION: Skim
-  INSTALL_BUTTON_TEXT: "Install %version%"
-  REINSTALL_BUTTON_TEXT: "Install %version%"
+  SELF_SERVICE_ICON: '%NAME%.png'
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
 ParentRecipe: com.github.homebysix.pkg.Skim
