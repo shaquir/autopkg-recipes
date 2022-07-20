@@ -4,10 +4,10 @@ Input:
   NAME: Rocket Chat
   CATEGORY: Communications
   GROUP_NAME: "autopkg-%NAME%"
-  GROUP_TEMPLATE: SmartGroup-update-smart-regex.xml
+  GROUP_TEMPLATE: JamfSmartGroupTemplate.xml
   TESTING_GROUP_NAME: Testing
   POLICY_CATEGORY: Testing
-  POLICY_TEMPLATE: Policy-install-latest.xml
+  POLICY_TEMPLATE: JamfPolicyTemplate.xml
   POLICY_NAME: "Install Latest %NAME%"
   POLICY_RUN_COMMAND: "echo 'Installation of %NAME% complete'"
   SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
@@ -18,26 +18,23 @@ Input:
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
 ParentRecipe: com.github.shaquir.pkg.RocketChat
-Process:
-- Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
-  Arguments:
-    category_name: "%CATEGORY%"
 
+Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
 
 - Processor: StopProcessingIf
   Arguments:
-    predicate: "%UPDATE_PREDICATE%"
-
-- Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+    predicate: '%UPDATE_PREDICATE%'
 
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
   Arguments:
-    computergroup_template: "%GROUP_TEMPLATE%"
-    computergroup_name: "%GROUP_NAME%"
+    computergroup_name: '%GROUP_NAME%'
+    computergroup_template: '%GROUP_TEMPLATE%'
 
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
   Arguments:
-    policy_template: "%POLICY_TEMPLATE%"
-    policy_name: "%POLICY_NAME%"
-    icon: "%SELF_SERVICE_ICON%"
+    icon: '%SELF_SERVICE_ICON%'
+    policy_name: '%POLICY_NAME%'
+    policy_template: '%POLICY_TEMPLATE%'
