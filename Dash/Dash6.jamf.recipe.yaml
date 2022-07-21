@@ -1,5 +1,5 @@
 Description: Recipe description
-Identifier: com.github.shaquir.jamf.PyCharm
+Identifier: com.github.shaquir.jamf.Dash6
 Input:
   NAME: Dash
   CATEGORY: Productivity
