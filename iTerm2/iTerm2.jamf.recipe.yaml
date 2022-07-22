@@ -1,0 +1,40 @@
+Description: Recipe description
+Identifier: com.github.shaquir.jamf.iTerm2
+Input:
+  NAME: iTerm2
+  CATEGORY: Utilities
+  GROUP_NAME: "autopkg-%NAME%"
+  GROUP_TEMPLATE: JamfSmartGroupTemplate.xml
+  TESTING_GROUP_NAME: Testing
+  POLICY_CATEGORY: Testing
+  POLICY_TEMPLATE: JamfPolicyTemplate.xml
+  POLICY_NAME: "Install Latest %NAME%"
+  POLICY_RUN_COMMAND: "echo 'Installation of %NAME% complete'"
+  SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
+  SELF_SERVICE_DESCRIPTION: iTerm2 is a replacement for Terminal.
+  INSTALL_BUTTON_TEXT: "Install %version%"
+  SELF_SERVICE_ICON: iTerm2.png
+  REINSTALL_BUTTON_TEXT: "Install %version%"
+  UPDATE_PREDICATE: "pkg_uploaded == False"
+MinimumVersion: '2.3'
+ParentRecipe: /Users/autopkg/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/iTerm2/iTerm2.pkg.recipe
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
+
+- Processor: StopProcessingIf
+  Arguments:
+    predicate: '%UPDATE_PREDICATE%'
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+  Arguments:
+    computergroup_name: '%GROUP_NAME%'
+    computergroup_template: '%GROUP_TEMPLATE%'
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+  Arguments:
+    icon: '%SELF_SERVICE_ICON%'
+    policy_name: '%POLICY_NAME%'
+    policy_template: '%POLICY_TEMPLATE%'
