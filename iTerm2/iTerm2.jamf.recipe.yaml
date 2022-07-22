@@ -8,6 +8,7 @@ Input:
   TESTING_GROUP_NAME: Testing
   POLICY_CATEGORY: Testing
   POLICY_TEMPLATE: JamfPolicyTemplate.xml
+  JSS_INVENTORY_NAME: iTerm.app
   POLICY_NAME: "Install Latest %NAME%"
   POLICY_RUN_COMMAND: "echo 'Installation of %NAME% complete'"
   SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
