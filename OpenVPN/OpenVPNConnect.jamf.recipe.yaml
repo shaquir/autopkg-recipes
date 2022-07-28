@@ -17,7 +17,7 @@ Input:
   REINSTALL_BUTTON_TEXT: "Install %version%"
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
-ParentRecipe: “com.github.dataJAR-recipes.download.OpenVPN Connect Client 3”
+ParentRecipe: com.github.dataJAR-recipes.download.OpenVPN Connect Client 3
 
 Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
