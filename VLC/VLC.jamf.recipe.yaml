@@ -1,0 +1,40 @@
+Description: Recipe description
+Identifier: com.github.shaquir.jamf.VLC
+Input:
+  NAME: VLC
+  CATEGORY: Productivity
+  GROUP_NAME: "autopkg-%NAME%"
+  GROUP_TEMPLATE: JamfSmartGroupTemplate.xml
+  TESTING_GROUP_NAME: Testing
+  POLICY_CATEGORY: Testing
+  POLICY_TEMPLATE: JamfPolicyTemplate.xml
+  POLICY_NAME: "Install Latest %NAME%"
+  POLICY_RUN_COMMAND: "echo 'Installation of %NAME% complete'"
+  SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
+  SELF_SERVICE_DESCRIPTION: VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.
+  INSTALL_BUTTON_TEXT: "Install"
+  SELF_SERVICE_ICON: VLC.png
+  REINSTALL_BUTTON_TEXT: "Reinstall"
+  UPDATE_PREDICATE: "pkg_uploaded == False"
+MinimumVersion: '2.3'
+ParentRecipe: com.github.autopkg.pkg.VLC
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
+
+- Processor: StopProcessingIf
+  Arguments:
+    predicate: '%UPDATE_PREDICATE%'
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+  Arguments:
+    computergroup_name: '%GROUP_NAME%'
+    computergroup_template: '%GROUP_TEMPLATE%'
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+  Arguments:
+    icon: '%SELF_SERVICE_ICON%'
+    policy_name: '%POLICY_NAME%'
+    policy_template: '%POLICY_TEMPLATE%'
