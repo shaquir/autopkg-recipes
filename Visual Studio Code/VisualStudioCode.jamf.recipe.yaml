@@ -1,0 +1,40 @@
+Description: Recipe description
+Identifier: com.github.shaquir.jamf.VisualStudioCode
+Input:
+  NAME: Visual Studio Code
+  CATEGORY: Editors
+  GROUP_NAME: "autopkg-%NAME%"
+  GROUP_TEMPLATE: JamfSmartGroupTemplate.xml
+  TESTING_GROUP_NAME: Testing
+  POLICY_CATEGORY: Testing
+  POLICY_TEMPLATE: JamfPolicyTemplate.xml
+  POLICY_NAME: "Install Latest %NAME%"
+  POLICY_RUN_COMMAND: "echo 'Installation of %NAME% complete'"
+  SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
+  SELF_SERVICE_DESCRIPTION: Visual Studio Code is a source code editor which includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
+  INSTALL_BUTTON_TEXT: "Install"
+  SELF_SERVICE_ICON: VisualStudioCode.png
+  REINSTALL_BUTTON_TEXT: "Reinstall"
+  UPDATE_PREDICATE: "pkg_uploaded == False"
+MinimumVersion: '2.3'
+ParentRecipe: com.github.killahquam.pkg.visualstudioscode
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
+
+- Processor: StopProcessingIf
+  Arguments:
+    predicate: '%UPDATE_PREDICATE%'
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+  Arguments:
+    computergroup_name: '%GROUP_NAME%'
+    computergroup_template: '%GROUP_TEMPLATE%'
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+  Arguments:
+    icon: '%SELF_SERVICE_ICON%'
+    policy_name: '%POLICY_NAME%'
+    policy_template: '%POLICY_TEMPLATE%'
