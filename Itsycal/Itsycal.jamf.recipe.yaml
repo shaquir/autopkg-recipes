@@ -11,10 +11,10 @@ Input:
   POLICY_NAME: "Install Latest %NAME%"
   POLICY_RUN_COMMAND: "echo 'Installation of %NAME% complete'"
   SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
-  SELF_SERVICE_DESCRIPTION: “Itsycal is a tiny menu bar calendar.  If you want, it will display your events as a companion to the Mac Calendar app.”
+  SELF_SERVICE_DESCRIPTION: "Itsycal is a tiny menu bar calendar.  If you want, it will display your events as a companion to the Mac Calendar app."
   INSTALL_BUTTON_TEXT: "Install"
   SELF_SERVICE_ICON: Itsycal.png
-  REINSTALL_BUTTON_TEXT: "Reinstall”
+  REINSTALL_BUTTON_TEXT: "Reinstall"
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
 ParentRecipe: com.github.shaquir.pkg.Itsycal
