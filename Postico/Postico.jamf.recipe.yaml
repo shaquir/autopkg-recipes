@@ -14,7 +14,7 @@ Input:
   SELF_SERVICE_DESCRIPTION: "PostgreSQL is an absurdly powerful database, but there's no reason why using it should require an advanced degree in relational theory. Postico provides an easy to use interface, making Postgres more accessible for newcomers and specialists alike."
   INSTALL_BUTTON_TEXT: "Install"
   SELF_SERVICE_ICON: Postico.png
-  REINSTALL_BUTTON_TEXT: "Reinstall”
+  REINSTALL_BUTTON_TEXT: "Reinstall"
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
 ParentRecipe: com.github.shaquir.pkg.Postico
