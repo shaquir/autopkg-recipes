@@ -4,6 +4,8 @@
 <dict>
 	<key>Comment</key>
 	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Comment</key>
+	<string>Modified to do a URL search for the latest build</string>
 	<key>Description</key>
 	<string>Downloads the latest version of Emacs.</string>
 	<key>Identifier</key>
@@ -18,15 +20,26 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>https://emacsformacosx.com/emacs-builds/Emacs-28.1-4-universal.dmg</string>
+				<string>https://emacsformacosx.com</string>
+				<key>re_pattern</key>
+				<string>(Emacs-.*-universal.dmg)</string>
+				<key>result_output_var_name</key>
+				<string>url</string>
 			</dict>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://emacsformacosx.com/emacs-builds/%url%</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
