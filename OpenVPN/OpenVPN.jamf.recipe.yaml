@@ -17,7 +17,7 @@ Input:
   REINSTALL_BUTTON_TEXT: "Reinstall"
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
-ParentRecipe: com.github.shaquir.pkg.OpenVPN
+ParentRecipe: com.github.shaquir.pkg.Openvpn
 
 Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
