@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads latest OpenVPN disk image.</string>
 	<key>Identifier</key>
-	<string>com.github.shaquir.download.openvpn</string>
+	<string>com.github.shaquir.download.Openvpn</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
