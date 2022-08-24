@@ -12,9 +12,9 @@ Input:
   POLICY_RUN_COMMAND: "echo 'Installation of %NAME% complete'"
   SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
   SELF_SERVICE_DESCRIPTION: Citrix Workspace is the easy-to-install client software that provides access to your Citrix XenDesktop and XenApp installations.
-  INSTALL_BUTTON_TEXT: "Install %version%"
+  INSTALL_BUTTON_TEXT: "Install"
   SELF_SERVICE_ICON: CitrixWorkspace.png
-  REINSTALL_BUTTON_TEXT: "Install %version%"
+  REINSTALL_BUTTON_TEXT: "Reinstall"
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
 ParentRecipe: com.github.rtrouton.pkg.citrixworkspace
