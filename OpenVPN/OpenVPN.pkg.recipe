@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Extract the flat package from the macFUSE dmg.</string>
     <key>Identifier</key>
-    <string>com.github.shaquir.pkg.openvpn</string>
+    <string>com.github.shaquir.pkg.Openvpn</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
