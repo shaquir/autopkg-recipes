@@ -12,6 +12,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>Smart Scroll</string>
+		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+        	<string>true</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
