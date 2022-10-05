@@ -1,7 +1,7 @@
 Description: Recipe description
 Identifier: com.github.shaquir.jamf.PyCharm
 Input:
-  NAME: PyCharm
+  NAME: PyCharm-arm64
   CATEGORY: Editors
   ARCHITECTURE: arm64
   PLATFORM: macM1
