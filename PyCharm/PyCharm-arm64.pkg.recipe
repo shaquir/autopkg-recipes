@@ -6,7 +6,7 @@
     <string>Downloads the current release version of PyCharm (Professional) and converts it into a pkg. (Modified version of chilcote's
 to support Apple Silicon)</string>
     <key>Identifier</key>
-    <string>com.github.shaquir.pkg.PyCharm</string>
+    <string>com.github.shaquir.pkg.PyCharm-arm64</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
