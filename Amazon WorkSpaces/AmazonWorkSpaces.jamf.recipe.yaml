@@ -17,7 +17,7 @@ Input:
   REINSTALL_BUTTON_TEXT: "Reinstall"
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
-ParentRecipe: com.github.crystalllized.pkg.AmazonWorkSpaces
+ParentRecipe: com.github.shaquir.pkg.AmazonWorkSpaces
 
 
 Process:
