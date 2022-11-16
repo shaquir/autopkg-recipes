@@ -19,7 +19,7 @@ Input:
   REINSTALL_BUTTON_TEXT: "Reinstall"
   UPDATE_PREDICATE: "pkg_uploaded == False"
 MinimumVersion: '2.3'
-ParentRecipe: /Users/autopkg/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/iTerm2/iTerm2.pkg.recipe
+ParentRecipe: io.github.hjuutilainen.pkg.iTerm2
 
 Process:
 - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
