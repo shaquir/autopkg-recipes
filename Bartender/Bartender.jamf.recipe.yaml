@@ -38,3 +38,7 @@ Process:
     icon: '%SELF_SERVICE_ICON%'
     policy_name: '%POLICY_NAME%'
     policy_template: '%POLICY_TEMPLATE%'
+    
+- Processor: really.cool.Processors/UpdateTitleEditor
+    Arguments:
+        title_id: '9'
