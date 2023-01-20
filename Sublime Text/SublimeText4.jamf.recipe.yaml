@@ -40,5 +40,5 @@ Process:
     policy_template: '%POLICY_TEMPLATE%'
     
 - Processor: really.cool.Processors/UpdateTitleEditor
-    Arguments:
-        title_id: '19'
+  Arguments:
+    title_id: '19'
