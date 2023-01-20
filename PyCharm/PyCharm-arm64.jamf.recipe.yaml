@@ -41,6 +41,6 @@ Process:
     policy_name: '%POLICY_NAME%'
     policy_template: '%POLICY_TEMPLATE%'
     
--   Processor: really.cool.Processors/UpdateTitleEditor
-    Arguments:
-        title_id: '22'
+- Processor: really.cool.Processors/UpdateTitleEditor
+  Arguments:
+    title_id: '22'
