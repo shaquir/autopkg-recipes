@@ -1,7 +1,7 @@
 Description: Recipe description
 Identifier: com.github.shaquir.jamf.RocketChat
 Input:
-  NAME: Rocket Chat
+  NAME: "Rocket Chat"
   CATEGORY: Communications
   GROUP_NAME: "autopkg-%NAME%"
   GROUP_TEMPLATE: JamfSmartGroupTemplate.xml
